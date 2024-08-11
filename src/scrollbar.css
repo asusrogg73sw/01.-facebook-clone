@@ -1,0 +1,50 @@
+
+
+/* ==================================================================== left sidebar scrollbar  */
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color of the scrollbar thumb */
+    /* border-radius: 6px; */
+    /* Rounded corners of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8800ff;
+    /* Color of the scrollbar thumb on hover */
+}
+
+/* ==================================================================== stories scrollbar  */
+
+/* styles.css */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+}
+
+ /* we can also use this in line css */
+/* style="overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none;"  */
+
+/* ====================================================================   */
+
+
+
+

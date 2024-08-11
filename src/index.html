@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>facebook clone practice</title>
+
+</head>
+
+<body class="relative box-border scroll-smooth bg-light_primaryBG dark:bg-dark_primaryBG font-open-sans">
+
+    <!-- ====================================================================================================================================== NAVBAR -->
+    <nav
+        class="flex fixed top-0 bg-light_primaryFG dark:bg-dark_primaryFG dark:border-b dark:border-darkborder w-full h-14 justify-between items-center px-4 shadow-md z-10">
+
+        <!--=================================================================================================================== LEFT NAVBAR -->
+        <div
+            class="sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 flex sm:space-x-2 md:space-x-2 justify-start space-x-2 items-center w-[35%]">
+
+            <!-- facebook icon -->
+            <a href="index.html" class="relative lg:flex-shrink-0">
+                <img src="img/fb2.png" alt=""
+                    class="sm:size-10 md:size-10 lg:size-10 size-10 cursor-pointer">
+            </a>
+
+            <!-- search box -->
+            <div
+                class="sm:size-10 xl:w-60 xl:flex bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-3 h-10 space-x-1 outline-2 flex justify-start items-center bg-opacity-50">
+
+                <label for="search_box" class="cursor-pointer opacity-60">
+                    <svg class="size-4 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </label>
+
+                <input type="text" placeholder="Search Facebook" id="search_box"
+                    class="sm:hidden xl:block hidden placeholder:text-black placeholder:font-light bg-light_secondaryBG dark:bg-dark_secondaryBG dark:placeholder:text-darkplaceholder dark:text-dark_primarytxt rounded-full p-1 w-40 outline-none bg-opacity-0">
+            </div>
+
+
+
+        </div>
+
+        <!--================================================================================================================= MIDDLE NAVBAR -->
+        <div class="lg:w-1/2 md:w-1/2 sm:hidden md:block hidden justify-center items-center">
+
+            <ul id="nav_list" class="flex space-x-2 justify-center items-center  ">
+                <li class="cursor-pointer bg-blue-600 rounded-md">
+                    <a href="#" class="md:w-14 lg:w-28 flex items-center justify-center h-11">
+                        <svg class="size-7 fill-white dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="cursor-pointer hover:bg-light_primary_hover hover:rounded-md opacity-60 dark:hover:bg-dark_primary_hover">
+                    <a href="#" class="md:w-14 lg:w-28 flex items-center justify-center h-11">
+                        <svg class="size-7 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="M40-272q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v32q0 33-23.5 56.5T600-160H120q-33 0-56.5-23.5T40-240v-32Zm800 112H738q11-18 16.5-38.5T760-240v-40q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v40q0 33-23.5 56.5T840-160ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="cursor-pointer hover:bg-light_primary_hover hover:rounded-md opacity-60 dark:hover:bg-dark_primary_hover">
+                    <a href="#" class="md:w-14 lg:w-28 flex items-center justify-center h-11">
+                        <svg class="size-7 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h480q33 0 56.5 23.5T720-720v180l126-126q10-10 22-5t12 19v344q0 14-12 19t-22-5L720-420v180q0 33-23.5 56.5T640-160H160Zm0-80h480v-480H160v480Zm0 0v-480 480Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="cursor-pointer hover:bg-light_primary_hover hover:rounded-md opacity-60 dark:hover:bg-dark_primary_hover">
+                    <a href="#" class="md:w-14 lg:w-28 flex items-center justify-center h-11">
+                        <svg class="size-7 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="M40-240q-17 0-28.5-11.5T0-280v-23q0-43 44-70t116-27q13 0 25 .5t23 2.5q-14 21-21 44t-7 48v65H40Zm240 0q-17 0-28.5-11.5T240-280v-25q0-32 17.5-58.5T307-410q32-20 76.5-30t96.5-10q53 0 97.5 10t76.5 30q32 20 49 46.5t17 58.5v25q0 17-11.5 28.5T680-240H280Zm500 0v-65q0-26-6.5-49T754-397q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v23q0 17-11.5 28.5T920-240H780Zm-455-80h311q-10-20-55.5-35T480-370q-55 0-100.5 15T325-320ZM160-440q-33 0-56.5-23.5T80-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-440Zm640 0q-33 0-56.5-23.5T720-520q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-440Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-600q0 50-34.5 85T480-480Zm0-80q17 0 28.5-11.5T520-600q0-17-11.5-28.5T480-640q-17 0-28.5 11.5T440-600q0 17 11.5 28.5T480-560Zm1 240Zm-1-280Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="cursor-pointer hover:bg-light_primary_hover hover:rounded-md opacity-60 dark:hover:bg-dark_primary_hover">
+                    <a href="#" class="md:w-14 lg:w-28 flex items-center justify-center h-11">
+                        <svg class="size-7 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#000000">
+                            <path
+                                d="M189-160q-60 0-102.5-43T42-307q0-9 1-18t3-18l84-336q14-54 57-87.5t98-33.5h390q55 0 98 33.5t57 87.5l84 336q2 9 3.5 18.5T919-306q0 61-43.5 103.5T771-160q-42 0-78-22t-54-60l-28-58q-5-10-15-15t-21-5H385q-11 0-21 5t-15 15l-28 58q-18 38-54 60t-78 22Zm3-80q19 0 34.5-10t23.5-27l28-57q15-31 44-48.5t63-17.5h190q34 0 63 18t45 48l28 57q8 17 23.5 27t34.5 10q28 0 48-18.5t21-46.5q0 1-2-19l-84-335q-7-27-28-44t-49-17H285q-28 0-49.5 17T208-659l-84 335q-2 6-2 18 0 28 20.5 47t49.5 19Zm348-280q17 0 28.5-11.5T580-560q0-17-11.5-28.5T540-600q-17 0-28.5 11.5T500-560q0 17 11.5 28.5T540-520Zm80-80q17 0 28.5-11.5T660-640q0-17-11.5-28.5T620-680q-17 0-28.5 11.5T580-640q0 17 11.5 28.5T620-600Zm0 160q17 0 28.5-11.5T660-480q0-17-11.5-28.5T620-520q-17 0-28.5 11.5T580-480q0 17 11.5 28.5T620-440Zm80-80q17 0 28.5-11.5T740-560q0-17-11.5-28.5T700-600q-17 0-28.5 11.5T660-560q0 17 11.5 28.5T700-520Zm-360 60q13 0 21.5-8.5T370-490v-40h40q13 0 21.5-8.5T440-560q0-13-8.5-21.5T410-590h-40v-40q0-13-8.5-21.5T340-660q-13 0-21.5 8.5T310-630v40h-40q-13 0-21.5 8.5T240-560q0 13 8.5 21.5T270-530h40v40q0 13 8.5 21.5T340-460Zm140-20Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--================================================================================================================== RIGHT NAVBAR -->
+        <div class="sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4 justify-end space-x-2 flex items-center w-[65%]">
+
+            <!-- theme toggler icons  -->
+            <div class="flex justify-center items-center space-x-2">
+                <!-- night -->
+                <a href="#" class="moon bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-2 hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover cursor-pointer">
+                <svg class=" size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+                </a>
+                <!-- day -->
+                <a href="#" class="sun bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-2 hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover cursor-pointer">
+                <svg class=" size-6 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+                </a>
+            </div>
+
+            <a href="#"
+                class="hidden xl:inline-block bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-2 hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover cursor-pointer">
+                <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#000000">
+                    <path
+                        d="M217.39-114q-42.88 0-73.13-30.26Q114-174.51 114-217.39q0-42.88 30.26-72.74Q174.51-320 217.39-320q42.88 0 72.74 29.87Q320-260.27 320-217.39q0 42.88-29.87 73.13Q260.27-114 217.39-114Zm262.74 0q-42.13 0-72.63-30.26-30.5-30.25-30.5-73.13 0-42.88 30.37-72.74Q437.73-320 479.87-320q42.13 0 72.63 29.87 30.5 29.86 30.5 72.74 0 42.88-30.37 73.13Q522.27-114 480.13-114Zm262.48 0q-42.88 0-72.74-30.26Q640-174.51 640-217.39q0-42.88 29.87-72.74Q699.73-320 742.61-320q42.88 0 73.13 29.87Q846-260.27 846-217.39q0 42.88-30.26 73.13Q785.49-114 742.61-114ZM217.39-377q-42.88 0-73.13-30.37Q114-437.73 114-479.87q0-42.13 30.26-72.63 30.25-30.5 73.13-30.5 42.88 0 72.74 30.37Q320-522.27 320-480.13q0 42.13-29.87 72.63-29.86 30.5-72.74 30.5Zm262.74 0q-42.13 0-72.63-30.37-30.5-30.36-30.5-72.5 0-42.13 30.37-72.63 30.36-30.5 72.5-30.5 42.13 0 72.63 30.37 30.5 30.36 30.5 72.5 0 42.13-30.37 72.63-30.36 30.5-72.5 30.5Zm262.48 0q-42.88 0-72.74-30.37Q640-437.73 640-479.87q0-42.13 29.87-72.63 29.86-30.5 72.74-30.5 42.88 0 73.13 30.37Q846-522.27 846-480.13q0 42.13-30.26 72.63-30.25 30.5-73.13 30.5ZM217.39-640q-42.88 0-73.13-29.87Q114-699.73 114-742.61q0-42.88 30.26-73.13Q174.51-846 217.39-846q42.88 0 72.74 30.26Q320-785.49 320-742.61q0 42.88-29.87 72.74Q260.27-640 217.39-640Zm262.74 0q-42.13 0-72.63-29.87-30.5-29.86-30.5-72.74 0-42.88 30.37-73.13Q437.73-846 479.87-846q42.13 0 72.63 30.26 30.5 30.25 30.5 73.13 0 42.88-30.37 72.74Q522.27-640 480.13-640Zm262.48 0q-42.88 0-72.74-29.87Q640-699.73 640-742.61q0-42.88 29.87-73.13Q699.73-846 742.61-846q42.88 0 73.13 30.26Q846-785.49 846-742.61q0 42.88-30.26 72.74Q785.49-640 742.61-640Z" />
+                </svg>
+            </a>
+
+            <a href="#"
+                class="bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-2 hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover cursor-pointer  ">
+                <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#000000">
+                    <path
+                        d="M224-400h350v-80H224v80Zm0-135h512v-80H224v80Zm0-135h512v-80H224v80ZM48-38v-780q0-43.72 31.14-74.86T154-924h652q43.72 0 74.86 31.14T912-818v488q0 43.73-31.14 74.86Q849.72-224 806-224H234L48-38Zm142-292h616v-488H154v524l36-36Zm-36 0v-488 488Z" />
+                </svg>
+            </a>
+
+            <a href="#"
+                class="bg-light_secondaryBG dark:bg-dark_secondaryBG rounded-full p-2 hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover cursor-pointer ">
+                <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#000000">
+                    <path
+                        d="M114-154v-136h68v-246q0-99 57-179t153-106v-17q0-36.67 25.65-62.33Q443.3-926 479.94-926t62.35 25.67Q568-874.67 568-838v17q96 25 153.5 104.54T779-536v246h68v136H114ZM480.96-18q-40.91 0-68.94-28.2Q384-74.4 384-114h193q0 40-28.21 68t-67.83 28Z" />
+                </svg>
+            </a>
+
+            <a href="#" class="">
+                <img class="rounded-full hover:brightness-110 dark:hover:brightness-105 cursor-pointer"
+                    src="img/profile_img.jpg" alt="not available" srcset="">
+
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- ================================================================================================================================ MAIN SECTION -->
+
+    <div class="relative flex lg:justify-between  justify-evenly w-full min-h-screen pt-14 font-semibold">
+
+        <!-- ================================================================================================================== LEFT SIDEBAR -->
+        <sidebar id="" class=" xl:block xl:fixed top-14 left-0 lg:w-1/4 xl:w-1/5 hidden h-screen  pt-4 px-2">
+
+            <div class="flex flex-col w-full h-full justify-between overflow-y-auto dark:text-dark_primarytxt">
+                <ul id="menu-list" class="space-y-1">
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <img class="size-8 rounded-full" src="img/profile_img.jpg" alt="not available" srcset="">
+                            <p>Danish Danish</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#2c4df2"
+                                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM609.3 512l-137.8 0c5.4-9.4 8.6-20.3 8.6-32l0-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2l61.4 0C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                            </svg>
+                            </svg>
+                            <p>Find Friends</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#63E6BE"
+                                    d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                            </svg>
+                            <p>Memories</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#8513c3"
+                                    d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+                            </svg>
+                            <p>Saved</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#5593f7"
+                                    d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                            </svg>
+                            <p>Groups</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#2dbe6c"
+                                    d="M64 64l0 288 512 0 0-288L64 64zM0 64C0 28.7 28.7 0 64 0L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 416c-35.3 0-64-28.7-64-64L0 64zM128 448l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-384 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+                            </svg>
+                            <p>Video</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#dbd406"
+                                    d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0L109.6 0C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9c0 0 0 0-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3L448 384l-320 0 0-133.4c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3L64 384l0 64c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-64 0-131.4c-4 1-8 1.8-12.3 2.3z" />
+                            </svg>
+                            <p>Marketplace</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#411f51"
+                                    d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z" />
+                            </svg>
+                            <p>Feed</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#1f513b"
+                                    d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z" />
+                            </svg>
+                            <p>Events</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#3a928c"
+                                    d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z" />
+                            </svg>
+                            <p>Ads Manager</p>
+                        </a></li>
+                    <li> <a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                            <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#3dffab"
+                                    d="M320 96L192 96 144.6 24.9C137.5 14.2 145.1 0 157.9 0L354.1 0c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128l128 0c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96L96 512c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4c0 0 0 0 0 0s0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15c0 0 0 0 0 0l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7l0-13.9z" />
+                            </svg>
+                            <p>Fundraisers</p>
+                        </a></li>
+
+                    <!-- =============================================================================================================================================== SEE MORE -->
+
+                    <li id="more-items" class="hidden">
+                        <ul class="space-y-1">
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#63E6BE"
+                                            d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                    </svg>
+                                    <p>Memories</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#8513c3"
+                                            d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z" />
+                                    </svg>
+                                    <p>Saved</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#5593f7"
+                                            d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z" />
+                                    </svg>
+                                    <p>Groups</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#2dbe6c"
+                                            d="M64 64l0 288 512 0 0-288L64 64zM0 64C0 28.7 28.7 0 64 0L576 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64L64 416c-35.3 0-64-28.7-64-64L0 64zM128 448l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-384 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+                                    </svg>
+                                    <p>Video</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#dbd406"
+                                            d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0L109.6 0C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9c0 0 0 0-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3L448 384l-320 0 0-133.4c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3L64 384l0 64c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-64 0-131.4c-4 1-8 1.8-12.3 2.3z" />
+                                    </svg>
+                                    <p>Marketplace</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#411f51"
+                                            d="M64 64C28.7 64 0 92.7 0 128l0 64c0 8.8 7.4 15.7 15.7 18.6C34.5 217.1 48 235 48 256s-13.5 38.9-32.3 45.4C7.4 304.3 0 311.2 0 320l0 64c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-64c0-8.8-7.4-15.7-15.7-18.6C541.5 294.9 528 277 528 256s13.5-38.9 32.3-45.4c8.3-2.9 15.7-9.8 15.7-18.6l0-64c0-35.3-28.7-64-64-64L64 64zm64 112l0 160c0 8.8 7.2 16 16 16l288 0c8.8 0 16-7.2 16-16l0-160c0-8.8-7.2-16-16-16l-288 0c-8.8 0-16 7.2-16 16zM96 160c0-17.7 14.3-32 32-32l320 0c17.7 0 32 14.3 32 32l0 192c0 17.7-14.3 32-32 32l-320 0c-17.7 0-32-14.3-32-32l0-192z" />
+                                    </svg>
+                                    <p>Feed</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#1f513b"
+                                            d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z" />
+                                    </svg>
+                                    <p>Events</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#3a928c"
+                                            d="M160 80c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-352zM0 272c0-26.5 21.5-48 48-48l32 0c26.5 0 48 21.5 48 48l0 160c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48L0 272zM368 96l32 0c26.5 0 48 21.5 48 48l0 288c0 26.5-21.5 48-48 48l-32 0c-26.5 0-48-21.5-48-48l0-288c0-26.5 21.5-48 48-48z" />
+                                    </svg>
+                                    <p>Ads Manager</p>
+                                </a></li>
+                            <li> <a href="#"
+                                    class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md hover:shadow-sm">
+                                    <svg class="size-8" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path fill="#3dffab"
+                                            d="M320 96L192 96 144.6 24.9C137.5 14.2 145.1 0 157.9 0L354.1 0c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128l128 0c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96L96 512c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4c0 0 0 0 0 0s0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20l0 14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1c0 0 0 0 0 0s0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4l0 14.6c0 11 9 20 20 20s20-9 20-20l0-13.8c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15c0 0 0 0 0 0l-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7l0-13.9z" />
+                                    </svg>
+                                    <p>Fundraisers</p>
+                                </a></li>
+
+                        </ul>
+                    </li>
+                    <li id="see-more"><a href="#"
+                            class="p-2 gap-3 flex items-center w-full h-13 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover hover:rounded-md">
+                            <svg class="size-9 rounded-full bg-gray-300 dark:bg-dark_secondaryBG dark:fill-darkfill p-2"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+                            </svg>
+                            <p>See more</p>
+                        </a></li>
+                </ul>
+
+                <!-- ========================================================================================================================= COPYWRITE AND OTHER LINKS  -->
+                <!-- class="mb-16 mt-6" -->
+                <div class="py-4 mb-14 text-light_secondarytxt dark:text-dark_secondarytxt text-xs">
+                    <div class="flex flex-wrap justify-start  space-x-2">
+                        <a href="#" class="hover:underline pl-2">Privacy</a>
+                        <a href="#" class="hover:underline">Terms</a>
+                        <a href="#" class="hover:underline">Advertising</a>
+                        <span class="flex gap-1 items-center"><a href="#" class="hover:underline">Ad choices</a><svg
+                                class="size-2 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                            </svg></span>
+                        <a href="#" class="hover:underline">Cookies</a>
+                        <a href="#" class="hover:underline">More</a>
+                        <span>&copy; 2024 Meta</span>
+                    </div>
+                </div>
+            </div>
+
+        </sidebar>
+
+        <!--======================================================================================================================== MIDDLE -->
+        
+        <main id="friends" class="sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 flex flex-col justify-center items-center w-full h-max pt-7 pb-4 lg:ml-32 xl:m-auto">
+
+            <div class="sm:w-sm-custom-W2 md:w-custom-W1 lg:w-custom-W1 xl:w-custom-W1 flex flex-col justify-center items-center w-full h-max space-y-4">
+                <!-- ================================================================================================================== STORIES  -->
+                <div
+                    class="sm:w-[94%] md:w-[78%]  relative z-0 flex justify-evenly items-center w-[94%] h-60 overflow-hidden ">
+
+                    <!-- =================buttons  -->
+                    <div id="left-btn" class=" absolute z-10 left-0 hidden justify-between items-center p-2">
+                        <a href="#"
+                            class="rounded-full bg-light_secondaryBG dark:bg-dark_primaryFG dark:hover:bg-dark_secondary_hover size-10 p-2 flex items-center justify-center">
+                            <svg class=" dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- ====================stories images  -->
+                    <ul id="stories-container"
+                        class="relative flex row-span-1 justify-between w-full h-full gap-2 overflow-x-scroll no-scrollbar scroll-smooth dark:text-white">
+                        <li
+                            class=" w-36 h-full flex justify-center overflow-hidden rounded-md shadow-md flex-shrink-0  bg-light_primaryFG dark:bg-dark_primaryFG ">
+                            <img src="https://picsum.photos/200/300?random=1" alt=""
+                                class="w-full h-48 object-cover hover:brightness-90 cursor-pointer">
+                            <div id="stories-container-first-li"
+                                class="absolute bottom-1.5 flex flex-col items-center gap-1 ">
+                                <a href="#" class="">
+                                    <svg class="size-10 rounded-full p-2 bg-blue-700 border-4 border-lightborder dark:border-dark_primaryFG fill-lightfill dark:fill-darkfill"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                                    </svg>
+                                </a>
+                                <span class="text-sm">Create story</span>
+                            </div>
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Fahad Ali</div>
+                            <img src="https://picsum.photos/200/300?random=2" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Zeeshan</div><img
+                                src="https://picsum.photos/200/300?random=3" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Ahmad</div><img
+                                src="https://picsum.photos/200/300?random=4" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Waqas</div><img
+                                src="https://picsum.photos/200/300?random=5" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Tahir</div><img
+                                src="https://picsum.photos/200/300?random=6" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Zaib</div><img
+                                src="https://picsum.photos/200/300?random=7" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Abdullah</div><img
+                                src="https://picsum.photos/200/300?random=8" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+                        <li class="relative w-36 h-full overflow-hidden rounded-md shadow-md flex-shrink-0  ">
+                            <div class="absolute z-10 left-0 top-0 p-3">
+                                <svg class="size-10 rounded-full border-4 p-1 border-blue-500 shadow-md"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path fill="#FFD43B"
+                                        d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z" />
+                                </svg>
+                            </div>
+                            <div class="absolute z-10 left-0 bottom-0 p-3 text-white shadow-md">Faraz</div><img
+                                src="https://picsum.photos/200/300?random=9" alt=""
+                                class="w-full h-full object-cover hover:brightness-90 cursor-pointer hover:scale-105">
+                        </li>
+
+                    </ul>
+
+                    <!-- =================buttons  -->
+                    <div id="right-btn" class=" absolute right-0 flex justify-between items-center p-2">
+                        <a href="#"
+                            class="rounded-full bg-light_secondaryBG dark:bg-dark_primaryFG dark:hover:bg-dark_secondary_hover size-10 p-2 flex items-center justify-center">
+                            <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- ============================================================================================================= CREATE STORY  -->
+                <div
+                    class="hidden sm:w-[94%] md:w-[78%] justify-center shadow-md items-center w-[94%] h-20 rounded-md bg-light_primaryFG dark:bg-dark_primaryFG">
+                    <a href="#" class="flex w-[98%] h-[80%] hover:rounded-md hover:bg-gray-100 dark:hover:bg-dark_primary_hover">
+                        <div class="flex items-center px-2 space-x-3">
+                            <svg class="size-9 rounded-full p-2 fill-blue-700 bg-teal-100 dark:bg-dark_secondaryBG dark:fill-darkfill"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                            </svg>
+                            <div>
+                                <p class="dark:text-dark_primarytxt">Create Story</p>
+                                <p class="text-sm text-gray-400 dark:text-dark_secondarytxt">Share a photo or write something.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ======================================================================================================= WHATS ON YOUR MIND  -->
+                <div
+                    class="sm:w-[94%] md:w-[78%] w-[94%] h-32 p-4 rounded-md bg-light_primaryFG shadow-md dark:bg-dark_primaryFG">
+
+                    <div class="w-[100%] flex space-x-2 justify-center pb-3 border-b dark:border-b dark:border-darkborder">
+                        <img class="size-10 rounded-full" src="img/profile_img.jpg" alt="not available" srcset="">
+                        <input type="text" placeholder="What's on your mind, Danish?" name="" id=""
+                            class="w-[100%] p-2 rounded-full outline-none bg-opacity-50  bg-light_secondaryBG text-sm dark:bg-dark_secondaryBG dark:placeholder:text-darkplaceholder dark:text-dark_primarytxt cursor-pointer">
+                    </div>
+
+                    <!-- icons -->
+                    <div class=" p-2 flex justify-evenly space-x-1 text-light_secondarytxt text-sm dark:text-dark_primarytxt">
+                        <a href="#"
+                            class="w-1/2 justify-center py-2 flex items-center space-x-2 hover:bg-gray-100 rounded-md dark:hover:bg-dark_primary_hover">
+                            <svg class="size-6" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#fe5d5d"
+                                    d="M0 128C0 92.7 28.7 64 64 64l256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2l0 256c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1l0-17.1 0-128 0-17.1 14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z" />
+                            </svg>
+                            <span class="hidden sm:block md:block lg:block xl:block">Live Video</span>
+                        </a>
+                        <a href="#"
+                            class="w-1/2 justify-center py-2 flex items-center space-x-2 hover:bg-gray-100 rounded-md dark:hover:bg-dark_primary_hover">
+                            <svg class="size-6" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#63E6BE"
+                                    d="M256 0L576 0c35.3 0 64 28.7 64 64l0 224c0 35.3-28.7 64-64 64l-320 0c-35.3 0-64-28.7-64-64l0-224c0-35.3 28.7-64 64-64zM476 106.7C471.5 100 464 96 456 96s-15.5 4-20 10.7l-56 84L362.7 169c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6l80 0 48 0 144 0c8.9 0 17-4.9 21.2-12.7s3.7-17.3-1.2-24.6l-96-144zM336 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM64 128l96 0 0 256 0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32 160 0 0 64c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 192c0-35.3 28.7-64 64-64zm8 64c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-16 0zm0 104c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-16 0zm0 104c-8.8 0-16 7.2-16 16l0 16c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-16 0zm336 16l0 16c0 8.8 7.2 16 16 16l16 0c8.8 0 16-7.2 16-16l0-16c0-8.8-7.2-16-16-16l-16 0c-8.8 0-16 7.2-16 16z" />
+                            </svg>
+                            <span class="hidden sm:block md:block lg:block xl:block">Photo/video</span>
+                        </a>
+                        <a href="#"
+                            class="w-1/2 justify-center py-2 flex items-center space-x-2 hover:bg-gray-100 rounded-md dark:hover:bg-dark_primary_hover">
+                            <svg class="size-6" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path fill="#FFD43B"
+                                    d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zm40-89.3s0 0 0 0c0 0 0 0 0 0l-.2-.2c-.2-.2-.4-.5-.7-.9c-.6-.8-1.6-2-2.8-3.4c-2.5-2.8-6-6.6-10.2-10.3c-8.8-7.8-18.8-14-27.7-14s-18.9 6.2-27.7 14c-4.2 3.7-7.7 7.5-10.2 10.3c-1.2 1.4-2.2 2.6-2.8 3.4c-.3 .4-.6 .7-.7 .9l-.2 .2c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c-2.1 2.8-5.7 3.9-8.9 2.8s-5.5-4.1-5.5-7.6c0-17.9 6.7-35.6 16.6-48.8c9.8-13 23.9-23.2 39.4-23.2s29.6 10.2 39.4 23.2c9.9 13.2 16.6 30.9 16.6 48.8c0 3.4-2.2 6.5-5.5 7.6s-6.9 0-8.9-2.8c0 0 0 0 0 0s0 0 0 0zm160 0c0 0 0 0 0 0l-.2-.2c-.2-.2-.4-.5-.7-.9c-.6-.8-1.6-2-2.8-3.4c-2.5-2.8-6-6.6-10.2-10.3c-8.8-7.8-18.8-14-27.7-14s-18.9 6.2-27.7 14c-4.2 3.7-7.7 7.5-10.2 10.3c-1.2 1.4-2.2 2.6-2.8 3.4c-.3 .4-.6 .7-.7 .9l-.2 .2c0 0 0 0 0 0c0 0 0 0 0 0s0 0 0 0c-2.1 2.8-5.7 3.9-8.9 2.8s-5.5-4.1-5.5-7.6c0-17.9 6.7-35.6 16.6-48.8c9.8-13 23.9-23.2 39.4-23.2s29.6 10.2 39.4 23.2c9.9 13.2 16.6 30.9 16.6 48.8c0 3.4-2.2 6.5-5.5 7.6s-6.9 0-8.9-2.8c0 0 0 0 0 0s0 0 0 0s0 0 0 0z" />
+                            </svg>
+                            <span class="hidden sm:block md:block lg:block xl:block">Feeling/activity</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ==================================================================================================================== POSTS  -->
+
+                <!--=================================================================================================== FIRST POST  -->
+                <div
+                    class="sm:w-[94%] md:w-[78%] relative block justify-center items-center w-[94%] h-auto p-4 space-y-4 rounded-md bg-light_primaryFG dark:bg-dark_primaryFG text-light_secondarytxt dark:text-dark_primarytxt dark:fill-white shadow-md overflow-hidden">
+
+                    <!-- upper section  -->
+                    <div class="flex justify-start space-x-2">
+                        <div class="">
+                            <img class="size-10 rounded-full cursor-pointer hover:brightness-110" src="img/profile_img.jpg"
+                                alt="not available" srcset="">
+                        </div>
+
+                        <div class="text-sm">
+                            <span class="flex space-x-2">
+                                <P>Pickles Comic Hub</P>
+                                <a href="#" class="sm:flex md:flex lg:flex xl:flex items-center hidden">
+                                    <svg class="size-3 fill-blue-700" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-blue-700 hidden sm:flex md:flex lg:flex xl:flex"> Follow</a>
+                            </span>
+                            <span class="text-xs font-light flex justify-normal items-center space-x-1">
+                                <p>11h</p>
+                                <a href="#">
+                                    <svg class="size-3 fill-light_secondarytxt" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="flex items-center p-4 absolute right-0 top-0 space-x-2">
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                                </svg>
+                            </a>
+
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- middle section  -->
+                    <div class="w-full text-sm font-light">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint repellat cumque vel culpa
+                            fuga beatae facere quibusdam eos, harum qui fugiat quo, saepe sapiente? Explicabo porro aliquam
+                            ducimus! Nisi.</p>
+                    </div>
+
+                    <!-- image section  -->
+                    <div
+                        class="w-full h-auto flex justify-center items-center hover:cursor-pointer hover:brightness-105 overflow-hidden ">
+                        <img src="https://picsum.photos/700" alt="" class="hover:scale-150 hover:transition ease-in">
+                    </div>
+
+                    <!-- footer section  -->
+                    <div class="flex justify-between items-center w-full h-2 ">
+                        <div class="flex justify-center items-center space-x-1">
+                            <a href="#"><svg class="size-4 fill-orange-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm407.4 75.5c5-11.8-7-22.5-19.3-18.7c-39.7 12.2-84.5 19-131.8 19s-92.1-6.8-131.8-19c-12.3-3.8-24.3 6.9-19.3 18.7c25 59.1 83.2 100.5 151.1 100.5s126.2-41.4 151.1-100.5zM160 120c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L160 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L226.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6zm192 0c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L352 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L418.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6z" />
+                                </svg></a>
+                            <a href="#"><svg class="size-4 fill-blue-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M426.8 14.2C446-5 477.5-4.6 497.1 14.9s20 51 .7 70.3c-6.8 6.8-21.4 12.4-37.4 16.7c-16.3 4.4-34.1 7.5-46.3 9.3c-1.6 .2-3.1 .5-4.6 .6c-4.9 .8-9.1-2.8-9.5-7.4c-.1-.7 0-1.4 .1-2.1c1.6-11.2 4.6-29.6 9-47c.3-1.3 .7-2.6 1-3.9c4.3-15.9 9.8-30.5 16.7-37.4zm-44.7 19c-1.5 4.8-2.9 9.6-4.1 14.3c-4.8 18.9-8 38.5-9.7 50.3c-4 26.8 18.9 49.7 45.7 45.8c11.9-1.6 31.5-4.8 50.4-9.7c4.7-1.2 9.5-2.5 14.3-4.1C534.2 227.5 520.2 353.8 437 437c-83.2 83.2-209.5 97.2-307.2 41.8c1.5-4.8 2.8-9.6 4-14.3c4.8-18.9 8-38.5 9.7-50.3c4-26.8-18.9-49.7-45.7-45.8c-11.9 1.6-31.5 4.8-50.4 9.7c-4.7 1.2-9.5 2.5-14.3 4.1C-22.2 284.5-8.2 158.2 75 75C158.2-8.3 284.5-22.2 382.2 33.2zM51.5 410.1c18.5-5 38.8-8.3 50.9-10c.4-.1 .7-.1 1-.1c5.1-.2 9.2 4.3 8.4 9.6c-1.7 12.1-5 32.4-10 50.9C97.6 476.4 92 491 85.2 497.8C66 517 34.5 516.6 14.9 497.1s-20-51-.7-70.3c6.8-6.8 21.4-12.4 37.4-16.7zM416.9 209c-4.7-11.9-20.8-11-26.8 .3c-19 35.5-45 70.8-77.5 103.3S244.8 371.1 209.3 390c-11.3 6-12.2 22.1-.3 26.8c57.6 22.9 125.8 11 172.3-35.5s58.4-114.8 35.5-172.3zM87.1 285.1c2 2 4.6 3.2 7.3 3.4l56.1 5.1 5.1 56.1c.3 2.8 1.5 5.4 3.4 7.3c6.3 6.3 17.2 3.6 19.8-4.9l29.7-97.4c3.5-11.6-7.3-22.5-19-19L92 265.3c-8.6 2.6-11.3 13.4-4.9 19.8zM265.3 92l-29.7 97.4c-3.5 11.6 7.3 22.5 19 19l97.4-29.7c8.6-2.6 11.3-13.4 4.9-19.8c-2-2-4.6-3.2-7.3-3.4l-56.1-5.1-5.1-56.1c-.3-2.8-1.5-5.4-3.4-7.3c-6.3-6.3-17.2-3.6-19.8 4.9z" />
+                                </svg></a>
+                            <a href="#" class="text-sm hover:underline">150</a>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2 text-sm">
+                            <a href="#" class="hover:underline">150 comment</a>
+                            <a href="#" class="hover:underline">150 share</a>
+                        </div>
+                    </div>
+                    <hr class="border-b dark:border-b dark:border-[#3A3B3C]">
+                    <div class="flex justify-evenly items-center w-full h-2 p-1">
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M323.8 34.8c-38.2-10.9-78.1 11.2-89 49.4l-5.7 20c-3.7 13-10.4 25-19.5 35l-51.3 56.4c-8.9 9.8-8.2 25 1.6 33.9s25 8.2 33.9-1.6l51.3-56.4c14.1-15.5 24.4-34 30.1-54.1l5.7-20c3.6-12.7 16.9-20.1 29.7-16.5s20.1 16.9 16.5 29.7l-5.7 20c-5.7 19.9-14.7 38.7-26.6 55.5c-5.2 7.3-5.8 16.9-1.7 24.9s12.3 13 21.3 13L448 224c8.8 0 16 7.2 16 16c0 6.8-4.3 12.7-10.4 15c-7.4 2.8-13 9-14.9 16.7s.1 15.8 5.3 21.7c2.5 2.8 4 6.5 4 10.6c0 7.8-5.6 14.3-13 15.7c-8.2 1.6-15.1 7.3-18 15.2s-1.6 16.7 3.6 23.3c2.1 2.7 3.4 6.1 3.4 9.9c0 6.7-4.2 12.6-10.2 14.9c-11.5 4.5-17.7 16.9-14.4 28.8c.4 1.3 .6 2.8 .6 4.3c0 8.8-7.2 16-16 16l-97.5 0c-12.6 0-25-3.7-35.5-10.7l-61.7-41.1c-11-7.4-25.9-4.4-33.3 6.7s-4.4 25.9 6.7 33.3l61.7 41.1c18.4 12.3 40 18.8 62.1 18.8l97.5 0c34.7 0 62.9-27.6 64-62c14.6-11.7 24-29.7 24-50c0-4.5-.5-8.8-1.3-13c15.4-11.7 25.3-30.2 25.3-51c0-6.5-1-12.8-2.8-18.7C504.8 273.7 512 257.7 512 240c0-35.3-28.6-64-64-64l-92.3 0c4.7-10.4 8.7-21.2 11.8-32.2l5.7-20c10.9-38.2-11.2-78.1-49.4-89zM32 192c-17.7 0-32 14.3-32 32L0 448c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32l-64 0z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Like</p>
+                        </a>
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9l.3-.5z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Comment</p>
+                        </a>
+                        <a href="#"
+                            class=" justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md flex"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M400 255.4l0-15.4 0-32c0-8.8-7.2-16-16-16l-32 0-16 0-46.5 0c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112l48 0 16 0 32 0c8.8 0 16-7.2 16-16l0-32 0-15.4L506 160 400 255.4zM336 240l16 0 0 48c0 17.7 14.3 32 32 32l3.7 0c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7L352 80l-16 0-32 0-16 0c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4l2.5 0c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5c0 0 0 0 0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5l14.5 0 32 0zM72 32C32.2 32 0 64.2 0 104L0 440c0 39.8 32.2 72 72 72l336 0c39.8 0 72-32.2 72-72l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64c0 13.3-10.7 24-24 24L72 464c-13.3 0-24-10.7-24-24l0-336c0-13.3 10.7-24 24-24l64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L72 32z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Share</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!--=================================================================================================== SECOND POST  -->
+                <div
+                    class="sm:w-[94%] md:w-[78%] relative block justify-center items-center w-[94%] h-auto p-4 space-y-4 rounded-md bg-light_primaryFG dark:bg-dark_primaryFG text-light_secondarytxt dark:text-dark_primarytxt dark:fill-white shadow-md overflow-hidden">
+
+                    <!-- upper section  -->
+                    <div class="flex justify-start space-x-2">
+                        <div class="">
+                            <img class="size-10 rounded-full cursor-pointer hover:brightness-110" src="img/profile_img.jpg"
+                                alt="not available" srcset="">
+                        </div>
+
+                        <div class="text-sm">
+                            <span class="flex space-x-2">
+                                <P>Pickles Comic Hub</P>
+                                <a href="#" class="sm:flex md:flex lg:flex xl:flex items-center hidden">
+                                    <svg class="size-3 fill-blue-700" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-blue-700 hidden sm:flex md:flex lg:flex xl:flex"> Follow</a>
+                            </span>
+                            <span class="text-xs font-light flex justify-normal items-center space-x-1">
+                                <p>11h</p>
+                                <a href="#">
+                                    <svg class="size-3 fill-light_secondarytxt" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="flex items-center p-4 absolute right-0 top-0 space-x-2">
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                                </svg>
+                            </a>
+
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- middle section  -->
+                    <div class="w-full text-sm font-light">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint repellat cumque vel culpa
+                            fuga beatae facere quibusdam eos, harum qui fugiat quo, saepe sapiente? Explicabo porro aliquam
+                            ducimus! Nisi.</p>
+                    </div>
+
+                    <!-- image section  -->
+                    <div
+                        class="w-full h-auto flex justify-center items-center hover:cursor-pointer hover:brightness-105 overflow-hidden ">
+                        <img src="https://picsum.photos/700" alt="" class="hover:scale-150 hover:transition ease-in">
+                    </div>
+
+                    <!-- footer section  -->
+                    <div class="flex justify-between items-center w-full h-2 ">
+                        <div class="flex justify-center items-center space-x-1">
+                            <a href="#"><svg class="size-4 fill-orange-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm407.4 75.5c5-11.8-7-22.5-19.3-18.7c-39.7 12.2-84.5 19-131.8 19s-92.1-6.8-131.8-19c-12.3-3.8-24.3 6.9-19.3 18.7c25 59.1 83.2 100.5 151.1 100.5s126.2-41.4 151.1-100.5zM160 120c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L160 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L226.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6zm192 0c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L352 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L418.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6z" />
+                                </svg></a>
+                            <a href="#"><svg class="size-4 fill-blue-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M426.8 14.2C446-5 477.5-4.6 497.1 14.9s20 51 .7 70.3c-6.8 6.8-21.4 12.4-37.4 16.7c-16.3 4.4-34.1 7.5-46.3 9.3c-1.6 .2-3.1 .5-4.6 .6c-4.9 .8-9.1-2.8-9.5-7.4c-.1-.7 0-1.4 .1-2.1c1.6-11.2 4.6-29.6 9-47c.3-1.3 .7-2.6 1-3.9c4.3-15.9 9.8-30.5 16.7-37.4zm-44.7 19c-1.5 4.8-2.9 9.6-4.1 14.3c-4.8 18.9-8 38.5-9.7 50.3c-4 26.8 18.9 49.7 45.7 45.8c11.9-1.6 31.5-4.8 50.4-9.7c4.7-1.2 9.5-2.5 14.3-4.1C534.2 227.5 520.2 353.8 437 437c-83.2 83.2-209.5 97.2-307.2 41.8c1.5-4.8 2.8-9.6 4-14.3c4.8-18.9 8-38.5 9.7-50.3c4-26.8-18.9-49.7-45.7-45.8c-11.9 1.6-31.5 4.8-50.4 9.7c-4.7 1.2-9.5 2.5-14.3 4.1C-22.2 284.5-8.2 158.2 75 75C158.2-8.3 284.5-22.2 382.2 33.2zM51.5 410.1c18.5-5 38.8-8.3 50.9-10c.4-.1 .7-.1 1-.1c5.1-.2 9.2 4.3 8.4 9.6c-1.7 12.1-5 32.4-10 50.9C97.6 476.4 92 491 85.2 497.8C66 517 34.5 516.6 14.9 497.1s-20-51-.7-70.3c6.8-6.8 21.4-12.4 37.4-16.7zM416.9 209c-4.7-11.9-20.8-11-26.8 .3c-19 35.5-45 70.8-77.5 103.3S244.8 371.1 209.3 390c-11.3 6-12.2 22.1-.3 26.8c57.6 22.9 125.8 11 172.3-35.5s58.4-114.8 35.5-172.3zM87.1 285.1c2 2 4.6 3.2 7.3 3.4l56.1 5.1 5.1 56.1c.3 2.8 1.5 5.4 3.4 7.3c6.3 6.3 17.2 3.6 19.8-4.9l29.7-97.4c3.5-11.6-7.3-22.5-19-19L92 265.3c-8.6 2.6-11.3 13.4-4.9 19.8zM265.3 92l-29.7 97.4c-3.5 11.6 7.3 22.5 19 19l97.4-29.7c8.6-2.6 11.3-13.4 4.9-19.8c-2-2-4.6-3.2-7.3-3.4l-56.1-5.1-5.1-56.1c-.3-2.8-1.5-5.4-3.4-7.3c-6.3-6.3-17.2-3.6-19.8 4.9z" />
+                                </svg></a>
+                            <a href="#" class="text-sm hover:underline">150</a>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2 text-sm">
+                            <a href="#" class="hover:underline">150 comment</a>
+                            <a href="#" class="hover:underline">150 share</a>
+                        </div>
+                    </div>
+                    <hr class="border-b dark:border-b dark:border-[#3A3B3C]">
+                    <div class="flex justify-evenly items-center w-full h-2 p-1">
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M323.8 34.8c-38.2-10.9-78.1 11.2-89 49.4l-5.7 20c-3.7 13-10.4 25-19.5 35l-51.3 56.4c-8.9 9.8-8.2 25 1.6 33.9s25 8.2 33.9-1.6l51.3-56.4c14.1-15.5 24.4-34 30.1-54.1l5.7-20c3.6-12.7 16.9-20.1 29.7-16.5s20.1 16.9 16.5 29.7l-5.7 20c-5.7 19.9-14.7 38.7-26.6 55.5c-5.2 7.3-5.8 16.9-1.7 24.9s12.3 13 21.3 13L448 224c8.8 0 16 7.2 16 16c0 6.8-4.3 12.7-10.4 15c-7.4 2.8-13 9-14.9 16.7s.1 15.8 5.3 21.7c2.5 2.8 4 6.5 4 10.6c0 7.8-5.6 14.3-13 15.7c-8.2 1.6-15.1 7.3-18 15.2s-1.6 16.7 3.6 23.3c2.1 2.7 3.4 6.1 3.4 9.9c0 6.7-4.2 12.6-10.2 14.9c-11.5 4.5-17.7 16.9-14.4 28.8c.4 1.3 .6 2.8 .6 4.3c0 8.8-7.2 16-16 16l-97.5 0c-12.6 0-25-3.7-35.5-10.7l-61.7-41.1c-11-7.4-25.9-4.4-33.3 6.7s-4.4 25.9 6.7 33.3l61.7 41.1c18.4 12.3 40 18.8 62.1 18.8l97.5 0c34.7 0 62.9-27.6 64-62c14.6-11.7 24-29.7 24-50c0-4.5-.5-8.8-1.3-13c15.4-11.7 25.3-30.2 25.3-51c0-6.5-1-12.8-2.8-18.7C504.8 273.7 512 257.7 512 240c0-35.3-28.6-64-64-64l-92.3 0c4.7-10.4 8.7-21.2 11.8-32.2l5.7-20c10.9-38.2-11.2-78.1-49.4-89zM32 192c-17.7 0-32 14.3-32 32L0 448c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32l-64 0z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Like</p>
+                        </a>
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9l.3-.5z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Comment</p>
+                        </a>
+                        <a href="#"
+                            class=" justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md flex"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M400 255.4l0-15.4 0-32c0-8.8-7.2-16-16-16l-32 0-16 0-46.5 0c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112l48 0 16 0 32 0c8.8 0 16-7.2 16-16l0-32 0-15.4L506 160 400 255.4zM336 240l16 0 0 48c0 17.7 14.3 32 32 32l3.7 0c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7L352 80l-16 0-32 0-16 0c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4l2.5 0c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5c0 0 0 0 0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5l14.5 0 32 0zM72 32C32.2 32 0 64.2 0 104L0 440c0 39.8 32.2 72 72 72l336 0c39.8 0 72-32.2 72-72l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64c0 13.3-10.7 24-24 24L72 464c-13.3 0-24-10.7-24-24l0-336c0-13.3 10.7-24 24-24l64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L72 32z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Share</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!--==================================================================================================== THIRD POST  -->
+                <div
+                    class="sm:w-[94%] md:w-[78%] relative block justify-center items-center w-[94%] h-auto p-4 space-y-4 rounded-md bg-light_primaryFG dark:bg-dark_primaryFG text-light_secondarytxt dark:text-dark_primarytxt dark:fill-white shadow-md overflow-hidden">
+
+                    <!-- upper section  -->
+                    <div class="flex justify-start space-x-2">
+                        <div class="">
+                            <img class="size-10 rounded-full cursor-pointer hover:brightness-110" src="img/profile_img.jpg"
+                                alt="not available" srcset="">
+                        </div>
+
+                        <div class="text-sm">
+                            <span class="flex space-x-2">
+                                <P>Pickles Comic Hub</P>
+                                <a href="#" class="sm:flex md:flex lg:flex xl:flex items-center hidden">
+                                    <svg class="size-3 fill-blue-700" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-blue-700 hidden sm:flex md:flex lg:flex xl:flex"> Follow</a>
+                            </span>
+                            <span class="text-xs font-light flex justify-normal items-center space-x-1">
+                                <p>11h</p>
+                                <a href="#">
+                                    <svg class="size-3 fill-light_secondarytxt" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5l0 39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9l0 39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7l0-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="flex items-center p-4 absolute right-0 top-0 space-x-2">
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                                </svg>
+                            </a>
+
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-gray-600 dark:fill-darkfill " xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- middle section  -->
+                    <div class="w-full text-sm font-light">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint repellat cumque vel culpa
+                            fuga beatae facere quibusdam eos, harum qui fugiat quo, saepe sapiente? Explicabo porro aliquam
+                            ducimus! Nisi.</p>
+                    </div>
+
+                    <!-- image section  -->
+                    <div
+                        class="w-full h-auto flex justify-center items-center hover:cursor-pointer hover:brightness-105 overflow-hidden ">
+                        <img src="https://picsum.photos/700" alt="" class="hover:scale-150 hover:transition ease-in">
+                    </div>
+
+                    <!-- footer section  -->
+                    <div class="flex justify-between items-center w-full h-2 ">
+                        <div class="flex justify-center items-center space-x-1">
+                            <a href="#"><svg class="size-4 fill-orange-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm407.4 75.5c5-11.8-7-22.5-19.3-18.7c-39.7 12.2-84.5 19-131.8 19s-92.1-6.8-131.8-19c-12.3-3.8-24.3 6.9-19.3 18.7c25 59.1 83.2 100.5 151.1 100.5s126.2-41.4 151.1-100.5zM160 120c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L160 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L226.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6zm192 0c-3.1 0-5.9 1.8-7.2 4.6l-16.6 34.7-38.1 5c-3.1 .4-5.6 2.5-6.6 5.5s-.1 6.2 2.1 8.3l27.9 26.5-7 37.8c-.6 3 .7 6.1 3.2 7.9s5.8 2 8.5 .6L352 232.5l33.8 18.3c2.7 1.5 6 1.3 8.5-.6s3.7-4.9 3.2-7.9l-7-37.8L418.4 178c2.2-2.1 3.1-5.3 2.1-8.3s-3.5-5.1-6.6-5.5l-38.1-5-16.6-34.7c-1.3-2.8-4.1-4.6-7.2-4.6z" />
+                                </svg></a>
+                            <a href="#"><svg class="size-4 fill-blue-600" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M426.8 14.2C446-5 477.5-4.6 497.1 14.9s20 51 .7 70.3c-6.8 6.8-21.4 12.4-37.4 16.7c-16.3 4.4-34.1 7.5-46.3 9.3c-1.6 .2-3.1 .5-4.6 .6c-4.9 .8-9.1-2.8-9.5-7.4c-.1-.7 0-1.4 .1-2.1c1.6-11.2 4.6-29.6 9-47c.3-1.3 .7-2.6 1-3.9c4.3-15.9 9.8-30.5 16.7-37.4zm-44.7 19c-1.5 4.8-2.9 9.6-4.1 14.3c-4.8 18.9-8 38.5-9.7 50.3c-4 26.8 18.9 49.7 45.7 45.8c11.9-1.6 31.5-4.8 50.4-9.7c4.7-1.2 9.5-2.5 14.3-4.1C534.2 227.5 520.2 353.8 437 437c-83.2 83.2-209.5 97.2-307.2 41.8c1.5-4.8 2.8-9.6 4-14.3c4.8-18.9 8-38.5 9.7-50.3c4-26.8-18.9-49.7-45.7-45.8c-11.9 1.6-31.5 4.8-50.4 9.7c-4.7 1.2-9.5 2.5-14.3 4.1C-22.2 284.5-8.2 158.2 75 75C158.2-8.3 284.5-22.2 382.2 33.2zM51.5 410.1c18.5-5 38.8-8.3 50.9-10c.4-.1 .7-.1 1-.1c5.1-.2 9.2 4.3 8.4 9.6c-1.7 12.1-5 32.4-10 50.9C97.6 476.4 92 491 85.2 497.8C66 517 34.5 516.6 14.9 497.1s-20-51-.7-70.3c6.8-6.8 21.4-12.4 37.4-16.7zM416.9 209c-4.7-11.9-20.8-11-26.8 .3c-19 35.5-45 70.8-77.5 103.3S244.8 371.1 209.3 390c-11.3 6-12.2 22.1-.3 26.8c57.6 22.9 125.8 11 172.3-35.5s58.4-114.8 35.5-172.3zM87.1 285.1c2 2 4.6 3.2 7.3 3.4l56.1 5.1 5.1 56.1c.3 2.8 1.5 5.4 3.4 7.3c6.3 6.3 17.2 3.6 19.8-4.9l29.7-97.4c3.5-11.6-7.3-22.5-19-19L92 265.3c-8.6 2.6-11.3 13.4-4.9 19.8zM265.3 92l-29.7 97.4c-3.5 11.6 7.3 22.5 19 19l97.4-29.7c8.6-2.6 11.3-13.4 4.9-19.8c-2-2-4.6-3.2-7.3-3.4l-56.1-5.1-5.1-56.1c-.3-2.8-1.5-5.4-3.4-7.3c-6.3-6.3-17.2-3.6-19.8 4.9z" />
+                                </svg></a>
+                            <a href="#" class="text-sm hover:underline">150</a>
+                        </div>
+                        <div class="flex justify-center items-center space-x-2 text-sm">
+                            <a href="#" class="hover:underline">150 comment</a>
+                            <a href="#" class="hover:underline">150 share</a>
+                        </div>
+                    </div>
+                    <hr class="border-b dark:border-b dark:border-[#3A3B3C]">
+                    <div class="flex justify-evenly items-center w-full h-2 p-1">
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M323.8 34.8c-38.2-10.9-78.1 11.2-89 49.4l-5.7 20c-3.7 13-10.4 25-19.5 35l-51.3 56.4c-8.9 9.8-8.2 25 1.6 33.9s25 8.2 33.9-1.6l51.3-56.4c14.1-15.5 24.4-34 30.1-54.1l5.7-20c3.6-12.7 16.9-20.1 29.7-16.5s20.1 16.9 16.5 29.7l-5.7 20c-5.7 19.9-14.7 38.7-26.6 55.5c-5.2 7.3-5.8 16.9-1.7 24.9s12.3 13 21.3 13L448 224c8.8 0 16 7.2 16 16c0 6.8-4.3 12.7-10.4 15c-7.4 2.8-13 9-14.9 16.7s.1 15.8 5.3 21.7c2.5 2.8 4 6.5 4 10.6c0 7.8-5.6 14.3-13 15.7c-8.2 1.6-15.1 7.3-18 15.2s-1.6 16.7 3.6 23.3c2.1 2.7 3.4 6.1 3.4 9.9c0 6.7-4.2 12.6-10.2 14.9c-11.5 4.5-17.7 16.9-14.4 28.8c.4 1.3 .6 2.8 .6 4.3c0 8.8-7.2 16-16 16l-97.5 0c-12.6 0-25-3.7-35.5-10.7l-61.7-41.1c-11-7.4-25.9-4.4-33.3 6.7s-4.4 25.9 6.7 33.3l61.7 41.1c18.4 12.3 40 18.8 62.1 18.8l97.5 0c34.7 0 62.9-27.6 64-62c14.6-11.7 24-29.7 24-50c0-4.5-.5-8.8-1.3-13c15.4-11.7 25.3-30.2 25.3-51c0-6.5-1-12.8-2.8-18.7C504.8 273.7 512 257.7 512 240c0-35.3-28.6-64-64-64l-92.3 0c4.7-10.4 8.7-21.2 11.8-32.2l5.7-20c10.9-38.2-11.2-78.1-49.4-89zM32 192c-17.7 0-32 14.3-32 32L0 448c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-224c0-17.7-14.3-32-32-32l-64 0z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Like</p>
+                        </a>
+                        <a href="#"
+                            class=" flex justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9l.3-.5z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Comment</p>
+                        </a>
+                        <a href="#"
+                            class=" justify-center items-center space-x-2 w-1/2 py-2 hover:bg-gray-200 dark:hover:bg-dark_primary_hover rounded-md flex"><svg
+                                class="size-5 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M400 255.4l0-15.4 0-32c0-8.8-7.2-16-16-16l-32 0-16 0-46.5 0c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112l48 0 16 0 32 0c8.8 0 16-7.2 16-16l0-32 0-15.4L506 160 400 255.4zM336 240l16 0 0 48c0 17.7 14.3 32 32 32l3.7 0c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7L352 80l-16 0-32 0-16 0c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4l2.5 0c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5c0 0 0 0 0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5l14.5 0 32 0zM72 32C32.2 32 0 64.2 0 104L0 440c0 39.8 32.2 72 72 72l336 0c39.8 0 72-32.2 72-72l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 64c0 13.3-10.7 24-24 24L72 464c-13.3 0-24-10.7-24-24l0-336c0-13.3 10.7-24 24-24l64 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L72 32z" />
+                            </svg>
+                            <p class="text-sm hidden sm:flex">Share</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </main>
+
+
+        <!--================================================================================================================= RIGHT SIDEBAR -->
+        <sidebar id="video" class=" lg:block lg:fixed top-14 right-0 lg:w-1/4 xl:w-1/5 hidden h-screen overflow-y-auto ">
+            <div class="relative">
+
+                <!-- ================================================================================================= PAGES AND PROFILES -->
+                <div class="flex flex-col pt-5 mb-2 space-y-1 dark:text-dark_primarytxt border-b pb-4 dark:border-b dark:border-darkborder">
+                    <div class="flex justify-between items-center">
+                        <span>Your pages and profiles</span>
+                        <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover mr-1">
+                            <svg class="fill-gray-600 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <img class="size-10 rounded-full" src="img/profile_img.jpg" alt="not available" srcset="">
+                            <p class="font-light">DdragonX</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="flex items-center space-x-2 w-full ml-4 h-8 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <svg class="size-4 opacity-60 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M0 224c0 17.7 14.3 32 32 32s32-14.3 32-32c0-53 43-96 96-96l160 0 0 32c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-9.2-9.2-22.9-11.9-34.9-6.9S320 19.1 320 32l0 32L160 64C71.6 64 0 135.6 0 224zm512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 53-43 96-96 96l-160 0 0-32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-32 160 0c88.4 0 160-71.6 160-160z" />
+                            </svg>
+                            <p class="text-sm font-light">Switch to page</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class="flex items-center space-x-2 w-full ml-4 h-8 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <svg class="size-4 opacity-60 dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M480 32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9L381.7 53c-48 48-113.1 75-181 75l-8.7 0-32 0-96 0c-35.3 0-64 28.7-64 64l0 96c0 35.3 28.7 64 64 64l0 128c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-128 8.7 0c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-147.6c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4L480 32zm-64 76.7L416 240l0 131.3C357.2 317.8 280.5 288 200.7 288l-8.7 0 0-96 8.7 0c79.8 0 156.5-29.8 215.3-83.3z" />
+                            </svg>
+                            <p class="text-sm font-light">Create promotion</p>
+                        </a>
+                    </div>
+                    <div></div>
+                </div>
+
+                <!-- ======================================================================================================= FRIEND LIST  -->
+                <div class="flex flex-col pt-5 mb-2 space-y-1 dark:text-dark_primarytxt ">
+                    <div class="flex justify-between items-center">
+                        <span>Contacts</span>
+                        <div class="flex justify-center items-center space-x-2 mr-1">
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="p-1 size-6 fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                            </a>
+                            <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                                <svg class="fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="mb-2 opacity-50 dark:text-dark_primarytxt border-b pb-4 dark:border-b dark:border-darkborder">
+                    <li>
+                        <a href="#"
+                            class="flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <img class="size-10 rounded-full" src="https://picsum.photos/200/300/?random=1"
+                                alt="not available" srcset="">
+                            <p class="font-light">Ali</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <img class="size-10 rounded-full" src="https://picsum.photos/200/300/?random=2"
+                                alt="not available" srcset="">
+                            <p class="font-light">Zeeshan</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <img class="size-10 rounded-full" src="https://picsum.photos/200/300/?random=3"
+                                alt="not available" srcset="">
+                            <p class="font-light">Tahir</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer">
+                            <img class="size-10 rounded-full" src="https://picsum.photos/200/300/?random=4"
+                                alt="not available" srcset="">
+                            <p class="font-light">Ahmad</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- =============================================================================================== GROUP CONVERSATION  -->
+                <div class="flex flex-col pt-5 space-y-1 mb-16 dark:text-dark_primarytxt">
+                    <div class="flex justify-between items-center">
+                        <span>Group conversations</span>
+                        <a href="#" class="p-1 rounded-full hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover">
+                            <svg class="fill-light_secondarytxt dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class=" flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer opacity-50">
+                            <div class="size-10 relative">
+                                <img class="absolute right-0 top-0 size-6 rounded-full"
+                                    src="https://picsum.photos/200/300/?random=13" alt="not available" srcset="">
+                                <img class="absolute bottom-0 left-0 size-6 rounded-full"
+                                    src="https://picsum.photos/200/300/?random=14" alt="not available" srcset="">
+                            </div>
+                            <p class="font-light">Zaib and hashir</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class=" flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer opacity-50">
+                            <div class="size-10 relative">
+                                <img class="absolute right-0 top-0 size-6 rounded-full"
+                                    src="https://picsum.photos/200/300/?random=15" alt="not available" srcset="">
+                                <img class="absolute bottom-0 left-0 size-6 rounded-full"
+                                    src="https://picsum.photos/200/300/?random=16" alt="not available" srcset="">
+                            </div>
+                            <p class="font-light">Ali and anwar</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#"
+                            class=" flex flex-row space-x-2 items-center w-full h-12 p-2 hover:bg-light_primary_hover dark:hover:bg-dark_primary_hover rounded-md cursor-pointer ">
+                            <svg class="size-9 rounded-full p-2 bg-light_secondaryBG dark:bg-dark_secondaryBG dark:fill-darkfill" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path
+                                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" />
+                            </svg>
+                            <p class="font-light">Create New Group</p>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </sidebar>
+
+    </div>
+
+    <!--======================================================================================================================================= FOOTER -->
+    <footer class="absolute top-14 right-0 hidden sm:inline-block">
+        <!-- =============================================================================================== STICKY MESSAGES  -->
+        <div
+            class="fixed right-3 bottom-4 size-12 justify-center flex items-center rounded-full shadow-lg bg-light_secondaryBG dark:bg-dark_primaryFG hover:bg-light_secondary_hover dark:hover:bg-dark_secondary_hover">
+            <a href="#">
+                <svg class="size-6 dark:fill-white" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z" />
+                </svg></a>
+        </div>
+
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
